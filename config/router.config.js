@@ -43,20 +43,61 @@ export default [
           {
             path: '/products/uzunmamuller',
             name: 'Uzun Mamüller',
+            component: './Products',
             routes: [
               {
-                path: '/products/uzunmamuller/yassidemirler',
-                name: 'Yassi Demirler',
+                path: '/products/uzunmamuller/insaatdemiri',
+                name: 'İnşaat Demiri',
                 component: './Products',
               },
               {
-                path: 'products/uzunmamuller/profildemirler',
-                name: 'Profil Demirler',
+                path: '/products/uzunmamuller/celikhasir',
+                name: 'Çelik Hasır',
                 component: './Products',
               },
               {
-                path: 'products/uzunmamuller/dikeydemirler',
-                name: 'Dikey Demirler',
+                path: '/products/uzunmamuller/filmasin',
+                name: 'Filmaşin',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/inp',
+                name: 'INP(NPI)/UNP(NPU) Profiller',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/hea',
+                name: 'HEA / HEB / IPE Profiller',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/kosebent',
+                name: 'Köşebent',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/lama',
+                name: 'Lama / Silme',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/karedd',
+                name: 'Kare Dolu Demir',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/dyd',
+                name: 'Düz Yuvarlark Demir',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/t-demiri',
+                name: 'T-Demiri',
+                component: './Products',
+              },
+              {
+                path: '/products/uzunmamuller/transmisyon',
+                name: 'Transmisyon ve Soğuk Haddeler',
                 component: './Products',
               },
             ],
@@ -66,18 +107,48 @@ export default [
             name: 'Yassı Mamüller',
             routes: [
               {
-                path: '/products/yassimamuller/boru',
-                name: 'Yassi Demirler',
+                path: '/products/yassimamuller/shr',
+                name: 'Sıcak Haddelenmiş Rulo / Paket Sac',
                 component: './Products',
               },
               {
-                path: '/products/yassimamuller/profilboru',
-                name: 'Profil Demirler',
+                path: '/products/yassimamuller/shl',
+                name: 'Sıcak Haddelenmiş Levha Sac',
                 component: './Products',
               },
               {
-                path: '/products/yassimamuller/babademir',
-                name: 'Dikey Demirler',
+                path: '/products/yassimamuller/dkp',
+                name: 'Sıcak Haddelenmiş(DKP) Rulo',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/hrp',
+                name: 'HRP Rulo / Paket Sac(Asitlenmiş Sac)',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/gr',
+                name: 'Galvanizli Rulo / Paket Sac',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/bs',
+                name: 'Boyalı Sac',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/bgds',
+                name: 'Baklavalı / Gözyaşı Desenli Sac',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/tos',
+                name: 'Trapez / Oluklu Sac',
+                component: './Products',
+              },
+              {
+                path: '/products/yassimamuller/gds',
+                name: 'Genişletilmiş / Delikli Sac',
                 component: './Products',
               },
             ],
@@ -87,18 +158,33 @@ export default [
             name: 'Profiller',
             routes: [
               {
-                path: '/products/profiller/t-demir',
-                name: 'T-Demirler',
+                path: '/products/profiller/kdkp',
+                name: 'Kare Diktörget Kutu Profiller',
                 component: './Products',
               },
               {
-                path: '/products/profiller/L-Demirler',
-                name: 'L-Demirler',
+                path: '/products/profiller/gkpb',
+                name: 'Galvanizli Kutu Profil ve Borular',
                 component: './Products',
               },
               {
-                path: '/products/profiller/X-Demirler',
-                name: 'X-Demirler',
+                path: '/products/profiller/sb',
+                name: 'Sanayi Boruları',
+                component: './Products',
+              },
+              {
+                path: '/products/profiller/sgb',
+                name: 'Su ve Gaz Boruları',
+                component: './Products',
+              },
+              {
+                path: '/products/profiller/ssb',
+                name: 'Saw Spiral Borular',
+                component: './Products',
+              },
+              {
+                path: '/products/profiller/ccb',
+                name: 'Çelik Çekme Borular',
                 component: './Products',
               },
             ],
