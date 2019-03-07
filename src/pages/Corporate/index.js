@@ -4,13 +4,9 @@ import { Row, Col, Icon, Menu, Dropdown, Carousel, Card, Tabs } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
-import insaat from '../../assets/insaat.png';
-import karisikdemir from '../../assets/karisikdemir.png';
-import kaynak from '../../assets/kaynak.png';
-import yassi from '../../assets/yassi.png';
+import HeaderBox from '@/components/HeaderBox';
 import all from '../../assets/all2.jpg';
 import kurumsaljpg from '../../assets/kurumsal.jpg';
-import uzunmamuller from '../../assets/uzunmamuller.jpg';
 import aboutus from '../../assets/aboutus.jpg';
 
 const TabPane = Tabs.TabPane;
@@ -56,7 +52,6 @@ class About extends Component {
     function callback(key) {
       console.log(key);
     }
-    console.log(this.props.match.path.substr(11, 100));
 
     return (
       <GridContent>
@@ -67,21 +62,7 @@ class About extends Component {
         </div>
         <Tabs defaultActiveKey={this.props.match.path.substr(11, 100)} onChange={callback}>
           <TabPane tab="Faaliyetler" key="activities">
-            <Row>
-              <Col {...midColResponsiveProps}>
-                <Card
-                  style={{
-                    marginTop: '50px',
-                    textAlign: 'center',
-                    backgroundColor: '#2d577f',
-                    color: 'white',
-                  }}
-                  bodyStyle={{ padding: '13px' }}
-                >
-                  Faaliyetler
-                </Card>
-              </Col>
-            </Row>
+            <HeaderBox header={formatMessage({id: 'activities'})} />
             <Suspense fallback={<PageLoading />}>
               <Row gutter={24}>
                 <Col {...halfPageTabCol}>
@@ -136,21 +117,7 @@ class About extends Component {
             </Suspense>
           </TabPane>
           <TabPane tab="Uygulamalar" key="applications">
-            <Row>
-              <Col {...midColResponsiveProps}>
-                <Card
-                  style={{
-                    marginTop: '50px',
-                    textAlign: 'center',
-                    backgroundColor: '#2d577f',
-                    color: 'white',
-                  }}
-                  bodyStyle={{ padding: '13px' }}
-                >
-                  Uygulamalar
-                </Card>
-              </Col>
-            </Row>
+            <HeaderBox header={formatMessage({id: 'applications'})} />
             <Suspense fallback={<PageLoading />}>
               <Row gutter={24}>
                 <Col {...halfPageTabCol}>
@@ -205,21 +172,7 @@ class About extends Component {
             </Suspense>
           </TabPane>
           <TabPane tab="Hakkımızda" key="about">
-            <Row>
-              <Col {...midColResponsiveProps}>
-                <Card
-                  style={{
-                    marginTop: '50px',
-                    textAlign: 'center',
-                    backgroundColor: '#2d577f',
-                    color: 'white',
-                  }}
-                  bodyStyle={{ padding: '13px' }}
-                >
-                  Hakkımızda
-                </Card>
-              </Col>
-            </Row>
+            <HeaderBox header={formatMessage({id: 'about'})} />
             <Suspense fallback={<PageLoading />}>
               <Row gutter={24}>
                 <Col {...fullPageTabCol}>

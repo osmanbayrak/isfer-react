@@ -3,10 +3,11 @@ import { connect } from 'dva';
 import { Row, Col, Icon, Menu, Dropdown, Carousel, Card } from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import { getTimeDistance } from '@/utils/utils';
+import HeaderBox from '@/components/HeaderBox';
 import styles from './Analysis.less';
 import PageLoading from '@/components/PageLoading';
 import { AsyncLoadBizCharts } from '@/components/Charts/AsyncLoadBizCharts';
-import insaat from '../../assets/insaat.png';
+import insaat from '../../assets/insaatdemiri.png';
 import karisikdemir from '../../assets/karisikdemir.png';
 import kaynak from '../../assets/kaynak.png';
 import yassi from '../../assets/yassi.png';
@@ -55,21 +56,7 @@ class Analysis extends Component {
             </Carousel>
           </Suspense>
         </div>
-        <Row>
-          <Col {...midColResponsiveProps}>
-            <Card
-              style={{
-                marginTop: '50px',
-                textAlign: 'center',
-                backgroundColor: '#2d577f',
-                color: 'white',
-              }}
-              bodyStyle={{ padding: '13px' }}
-            >
-              Ürün Grupları
-            </Card>
-          </Col>
-        </Row>
+        <HeaderBox header={'Ürün Grupları'} />
         <Suspense fallback={<PageLoading />}>
           <IntroduceRow loading={loading} />
         </Suspense>

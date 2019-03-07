@@ -4,12 +4,6 @@ import { Row, Col, Icon, Menu, Dropdown, Card, Tabs, Form } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
-import insaat from '../../assets/insaat.png';
-import karisikdemir from '../../assets/karisikdemir.png';
-import kaynak from '../../assets/kaynak.png';
-import yassi from '../../assets/yassi.png';
-import kurumsaljpg from '../../assets/kurumsal.jpg';
-import uzunmamuller from '../../assets/uzunmamuller.jpg';
 
 const TabPane = Tabs.TabPane;
 
@@ -24,29 +18,26 @@ class ProductTabs extends PureComponent {
     product: this.props.productName,
   };
 
+  importAll =(r)=> {
+    let imagees = {};
+    r.keys().map((item, index) => { imagees[item.replace('./', '')] = r(item); });
+    return imagees;
+  }
+
   callback = (key) => {
     this.setState({product: key})
   }
 
   render() {
-    console.log(this.props, this.state)
+    let images = this.importAll(require.context('../../assets/', false, /\.(png|jpe?g|svg)$/));
     const { chart, loading } = this.props;
-
-    const midColResponsiveProps = {
-      xs: { span: 24, offset: 0 },
-      sm: { span: 12, offset: 6 },
-      md: { span: 10, offset: 7 },
-      lg: { span: 10, offset: 7 },
-      xl: { span: 8, offset: 8 },
-      style: { marginBottom: 24 },
-    };
     const halfPageTabCol = {
-      xs: 24,
-      sm: 24,
-      md: 12,
-      lg: 12,
-      xl: 12,
-      style: { marginBottom: 24 },
+        xs: { span: 24, offset: 0 },
+        sm: { span: 24, offset: 0 },
+        md: { span: 11, offset: 0 },
+        lg: { span: 11, offset: 0 },
+        xl: { span: 11, offset: 0 },
+      style: { marginBottom: 24},
     };
     const fullPageTabCol = {
       xs: 24,
@@ -57,31 +48,31 @@ class ProductTabs extends PureComponent {
       style: { marginBottom: 24 },
     };
     const { Meta } = Card;
+    let currentProduct = this.state.product
 
     return (
         <div>
-            <Row>
-                <Col {...midColResponsiveProps}>
-                    <Card
-                        style={{
-                        marginTop: '50px',
-                        textAlign: 'center',
-                        backgroundColor: '#2d577f',
-                        color: 'white',
-                        }}
-                        bodyStyle={{ padding: '10px' }}
-                    >
-                        {formatMessage({id: this.props.productCategory.length > 0 ? this.props.productCategory : ' '})}
-                    </Card>
-                </Col>
-            </Row>
             <Tabs defaultActiveKey={this.state.product} onChange={this.callback}>
                 {this.props.products.map((product)=> {
+                    {currentProduct = this.state.product.length > 1 ? this.state.product : product}
                     return (
-                        <TabPane tab={formatMessage({id: product})} key={product}>
+                        <TabPane tab={formatMessage({id: currentProduct})} key={currentProduct}>
                             <Row>
-                                <Col {...fullPageTabCol}>
-                                <div>{this.state.product.length > 1 ? this.state.product : product}</div>
+                                <Col {...halfPageTabCol}>
+                                    <Card title={formatMessage({id: currentProduct})} extra={<a href="#">More</a>} cover={ <img alt={currentProduct} src={images[`${currentProduct}.png`]} /> }>
+                                        <Meta
+                                        title={<FormattedMessage id="description" />}
+                                        description={formatMessage({ id: `${currentProduct}_desc` })}
+                                        />
+                                    </Card>
+                                </Col>
+                                <Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
+                                    <Card title={formatMessage({id: currentProduct})} extra={<a href="#">More</a>} cover={ <img alt={currentProduct} src={images[`${currentProduct}.jpg`]} /> }>
+                                        <Meta
+                                        title={<FormattedMessage id="usage" />}
+                                        description={formatMessage({ id: `${currentProduct}_usage` })}
+                                        />
+                                    </Card>
                                 </Col>
                             </Row>
                         </TabPane> 

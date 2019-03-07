@@ -70,7 +70,7 @@ export default {
   routes: pageRoutes,
   theme: {
     'primary-color': defaultSettings.primaryColor,
-    'layout-header-background': '#021a33',
+    'layout-header-background': defaultSettings.darkColor,
     'menu-dark-submenu-bg': '#05213a',
     'layout-body-background': 'aliceblue',
     'modal-header-bg': 'aliceblue',

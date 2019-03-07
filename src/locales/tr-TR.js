@@ -1,18 +1,23 @@
-import analysis from './en-US/analysis';
-import exception from './en-US/exception';
-import form from './en-US/form';
-import globalHeader from './en-US/globalHeader';
-import login from './en-US/login';
-import menu from './en-US/menu';
-import monitor from './en-US/monitor';
-import result from './en-US/result';
-import settingDrawer from './en-US/settingDrawer';
-import settings from './en-US/settings';
-import pwa from './en-US/pwa';
-import component from './en-US/component';
-import products from './en-US/products';
+import analysis from './tr-TR/analysis';
+import exception from './tr-TR/exception';
+import form from './tr-TR/form';
+import globalHeader from './tr-TR/globalHeader';
+import login from './tr-TR/login';
+import menu from './tr-TR/menu';
+import monitor from './tr-TR/monitor';
+import result from './tr-TR/result';
+import settingDrawer from './tr-TR/settingDrawer';
+import settings from './tr-TR/settings';
+import pwa from './tr-TR/pwa';
+import component from './tr-TR/component';
+import products from './tr-TR/products';
 
 export default {
+  activities: 'Faaliyetlerimiz',
+  applications: 'Uygulamalarımız',
+  description: 'Açıklama',
+  usage: 'Kullanım Alanları',
+  about: 'Hakkımızda',
   aboutus_text:
     'Dedemizden öğrendiğimiz sıcak ve soğuk demircilik mesleğine,yaklaşık çeyrek asır önce kurduğumuz şirket ile ilk adımımızı attık. Sıcak, soğuk, profil köşebent vb. demirin her türü ile yoğularak demir gibi yolumuza devam ettik. Artan iş hacmimiz ve müşteri potansiyelimize daha iyi hizmet verebilmek üzere 1993 yılında halen faaliyette olduğumuz 1000 m2′ lik yerimize taşındık. Sac kesim ve büküm işleri de yapmaya başlayarak işimizi büyütmeye devam ettik. Bir adet 10 tonluk bir portal vinci de bünyemize kattık. Piyasanın ve müşterilerimizin talepleri doğrultusunda DEKORATİF DEMİR sektöründe de çalışmaya başladık. İyi bildiğimiz Maden Demir işi üzerine daha yoğun çalışmak için 2002 yılında farklı bir yerde İSTANBUL METAL FERFORJE İNŞAAT SAN. ve TİC. LTD. ŞTİ. ni kurarak müşterilerimizin Dekoratif Demir taleplerine de cevap vermeye başladık. ISO 9001 ve OHSAS 18001 sertifikalarını alarak ürün kalitemizle, müşteri memnuniyetini de pekiştirmiş olarak daha da güçlendik. Kaliteden taviz vermeden bu piyasadaki haklı yerimizi alacağımıza ve bu yolda sizlerle beraber omuz omuza olacağımıza inancımız tamdır. Azmimiz ve müşteri odaklı çalışmalarımızla, siz değerli müşterilerimizin beğenilerine daha iyi hitap etmek için 2009 yılı başı itibariyle taşındığımız 7500 m2 alanda daha güçlü bir şekilde; daima müşteri odaklı ve daha iyisini yapma gayretiyle sizlerle birlikte yolumuza devam edeceğiz.',
   aboutus_init: 'Başlarken..',
@@ -42,5 +47,5 @@ export default {
   ...settings,
   ...pwa,
   ...component,
-  ...products,
+  ...products
 };

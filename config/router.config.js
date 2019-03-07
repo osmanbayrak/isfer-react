@@ -191,7 +191,7 @@ export default [
           },
           {
             path: '/products/dekoratifler',
-            name: 'Dekoratif Demirler(Ferforje)',
+            name: 'Dekoratif Demirler',
             routes: [
               {
                 path: '/products/dekoratifler/ferforje-ayak',
