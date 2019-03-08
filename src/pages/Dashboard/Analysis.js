@@ -38,7 +38,7 @@ class Analysis extends Component {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-15px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
           <Suspense fallback={null}>
             <Carousel autoplay arrows={true} draggable={true}>
               <div>

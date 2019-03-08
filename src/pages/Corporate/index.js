@@ -15,7 +15,7 @@ const TabPane = Tabs.TabPane;
   chart,
   loading: loading.effects['chart/fetch'],
 }))
-class About extends Component {
+class Corporate extends Component {
   state = {
     salesType: '',
   };
@@ -23,14 +23,6 @@ class About extends Component {
   render() {
     const { chart, loading } = this.props;
 
-    const midColResponsiveProps = {
-      xs: { span: 24, offset: 0 },
-      sm: { span: 12, offset: 6 },
-      md: { span: 10, offset: 7 },
-      lg: { span: 10, offset: 7 },
-      xl: { span: 8, offset: 8 },
-      style: { marginBottom: 24 },
-    };
     const halfPageTabCol = {
       xs: 24,
       sm: 24,
@@ -55,7 +47,7 @@ class About extends Component {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-15px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
           <Suspense fallback={null}>
             <img style={{ width: '100%', height: 'auto' }} src={kurumsaljpg} />
           </Suspense>
@@ -201,4 +193,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default Corporate;

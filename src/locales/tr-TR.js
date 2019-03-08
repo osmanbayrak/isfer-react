@@ -13,6 +13,13 @@ import component from './tr-TR/component';
 import products from './tr-TR/products';
 
 export default {
+  list_appearence: 'Liste Görünümü',
+  cart: 'Sepetim',
+  weight: 'Ağırlık',
+  add_to_cart: 'Sepete Ekle',
+  uzunmamuller: 'Uzun Mamüller',
+  yassimamuller: 'Yassı Mamüller',
+  profiller: 'Profiller',
   activities: 'Faaliyetlerimiz',
   applications: 'Uygulamalarımız',
   description: 'Açıklama',

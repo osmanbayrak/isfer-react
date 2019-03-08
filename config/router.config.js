@@ -216,10 +216,10 @@ export default [
         path: '/cart',
         name: 'Sepetim',
         icon: 'shopping-cart',
-        component: './Dashboard/Analysis',
+        component: './Cart',
       },
       {
-        path: '/tech-info',
+        path: '/tech-info/:product',
         name: 'Teknik Bilgiler',
         icon: 'tool',
         routes: [
