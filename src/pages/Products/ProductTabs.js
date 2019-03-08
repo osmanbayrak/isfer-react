@@ -139,7 +139,7 @@ class ProductTabs extends PureComponent {
                                     </Card>
                                 </Col>
                                 <Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
-                                    <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={currentProduct} src={images[`${currentProduct}.jpg`]} /> }>
+                                    <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={currentProduct} src={images[`${currentProduct}2.png`]} /> }>
                                         <Meta
                                         description={formatMessage({ id: `${currentProduct}_usage` })}
                                         />

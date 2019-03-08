@@ -6,7 +6,7 @@ import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import HeaderBox from '@/components/HeaderBox';
 import all from '../../assets/all2.jpg';
 import kurumsaljpg from '../../assets/kurumsal.jpg';
-import aboutus from '../../assets/aboutus.jpg';
+import orderImg from '../../assets/order2.png';
 import data from '../../data';
 
 const TabPane = Tabs.TabPane;
@@ -48,7 +48,7 @@ class Cart extends Component {
       <GridContent>
         <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
           <Suspense fallback={null}>
-            <img style={{ width: '100%', height: 'auto' }} src={kurumsaljpg} />
+            <img style={{ width: '100%', height: 'auto' }} src={orderImg} />
           </Suspense>
         </div>
         <HeaderBox header={formatMessage({id: 'cart'})} />

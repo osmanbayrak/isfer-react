@@ -1,5 +1,6 @@
 export default {
-  'menu.home': 'Home',
+  'menu.Ürünler.Yassı Mamüller.Sıcak Haddelenmiş Rulo / Paket Sac': 'Sıcak Haddelenmiş Rulo/Paket Sac',
+  'menu.home': 'Anasayfa',
   'menu.Kurumsal': 'Kurumsal',
   'menu.Kurumsal.Faaliyetler': 'Faaliyetler',
   'menu.Kurumsal.Uygulamalar': 'Uygulamalar',
