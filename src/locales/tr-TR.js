@@ -13,6 +13,19 @@ import component from './tr-TR/component';
 import products from './tr-TR/products';
 
 export default {
+  en: 'En(m)',
+  boy: 'Boy(m)',
+  et: 'Et(mm)',
+  calculate: 'Ağırlık Hesaplama',
+  cart_edit_info: 'Sepete eklemek istediklerinizi ürünler kısmından işaretlip, ekle butonuna basarak sepetinize ekleyebilirsiniz. Çıkarmak istediklerinizi de işaretleyip çıkart butonu ile sepetten çıkarabilirsiniz.',
+  order_info: 'Siparişi onayla butonuna bastığınızda, e-mail servisi açılır ve istediğiniz ürünler ve açıklama bilgisi E-Postanızda yazılı şekilde karşınıza çıkar. Gönderirseniz siparişiniz bize ulaşır. Teşekkürler.',
+  extra_description: 'Ek Açıklama',
+  extra_description_ph: 'Siparişinizle alakalı eklemek istediğiniz bir şey varsa lütfen buraya yazınız.',
+  success: 'Başarılı',
+  add_Cart_success: 'Sepete başarıyla eklendi.',
+  edit_cart: 'Sepeti Düzenle',
+  email: 'E-Posta',
+  products: 'Ürünler',
   list_appearence: 'Liste Görünümü',
   cart: 'Sepetim',
   weight: 'Ağırlık',
@@ -25,12 +38,10 @@ export default {
   description: 'Açıklama',
   usage: 'Kullanım Alanları',
   about: 'Hakkımızda',
-  aboutus_text:
-    'Dedemizden öğrendiğimiz sıcak ve soğuk demircilik mesleğine,yaklaşık çeyrek asır önce kurduğumuz şirket ile ilk adımımızı attık. Sıcak, soğuk, profil köşebent vb. demirin her türü ile yoğularak demir gibi yolumuza devam ettik. Artan iş hacmimiz ve müşteri potansiyelimize daha iyi hizmet verebilmek üzere 1993 yılında halen faaliyette olduğumuz 1000 m2′ lik yerimize taşındık. Sac kesim ve büküm işleri de yapmaya başlayarak işimizi büyütmeye devam ettik. Bir adet 10 tonluk bir portal vinci de bünyemize kattık. Piyasanın ve müşterilerimizin talepleri doğrultusunda DEKORATİF DEMİR sektöründe de çalışmaya başladık. İyi bildiğimiz Maden Demir işi üzerine daha yoğun çalışmak için 2002 yılında farklı bir yerde İSTANBUL METAL FERFORJE İNŞAAT SAN. ve TİC. LTD. ŞTİ. ni kurarak müşterilerimizin Dekoratif Demir taleplerine de cevap vermeye başladık. ISO 9001 ve OHSAS 18001 sertifikalarını alarak ürün kalitemizle, müşteri memnuniyetini de pekiştirmiş olarak daha da güçlendik. Kaliteden taviz vermeden bu piyasadaki haklı yerimizi alacağımıza ve bu yolda sizlerle beraber omuz omuza olacağımıza inancımız tamdır. Azmimiz ve müşteri odaklı çalışmalarımızla, siz değerli müşterilerimizin beğenilerine daha iyi hitap etmek için 2009 yılı başı itibariyle taşındığımız 7500 m2 alanda daha güçlü bir şekilde; daima müşteri odaklı ve daha iyisini yapma gayretiyle sizlerle birlikte yolumuza devam edeceğiz.',
+  aboutus_text: 'Atalarımızdan öğrendiğimiz sıcak ve soğuk demircilik mesleğine, yaklaşık çeyrek asir önce kurdugumuz şirket ile ilk adımımızı attık. Sıcak, soğuk, profil köşebent vb. demirin her türü ile yoğrularak demir gibi, yolumuza devam ettik. Piyasanin ve müşterilerimizin talepleri doğrultusunda dekoratif demir sektöründe de çalışmaya başladık. İyi bildiğimiz maden demir işi üzerine daha yoğunlaşarak İstanbul Metal Ferforje İnş San Tic Ltd Şti’ni İSFER markasında kurumsallaştırarak müşterilerimizin dekoratif demir taleplerine de cevap vermeye başladık . ISO 9001 ve OHSAS 18001 sertifikalarini alarak ürün kalitemizle, müşteri memnuniyetini de pekiştirmis olarak daha da güçlendik. Kaliteden taviz vermeden bu piyasadaki yerimizi güçlendireceğimize ve bu yolda sizlerle beraber omuz omuza olacağımıza inancımız tamdır. Azmimiz ve müşteri odaklı çalışmalarımızla siz değerli müşterilerimizin daha iyi hitap etmek için yenilenip daha güçlü bir şekilde ve daima daha iyisini yapma gayretiyle sizlerle birlikte yolumuza devam edeceğiz. ',
   aboutus_init: 'Başlarken..',
   aboutus_footer1: 'Yakup POLAT',
   aboutus_footer2: 'Yönetim Kurulu Başkanı',
-  aboutus_footer3: 'Öneri ve Şikayetleriniz için; 0533 201 97 99',
   faaliyet1_title: 'İsfer Örnek Faaliyeti',
   faaliyet1_desc:
     'Biz böyle böyle faaliyetler yapıyoruz. Buda onlardan biri .ok güzel bir faaliyet fakirlere yardım ediyoruz, herkesi besliyoruz demirler yapıyoruz. Güzel insanlarla güzel yerlerde buluşup iş yapıyoruz. Faaliyetlerin ardı arkası yok. Bu faaliyetimizde demirleri kestik, biçtik doğradık ve onlarla güzel ferforjeler ürettik ömer buraya güzel yazılar bul abi :D',

@@ -6,6 +6,8 @@ import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
 import HeaderBox from '@/components/HeaderBox';
 import all from '../../assets/all2.jpg';
+import uygulama1 from '../../assets/uygulama2.png';
+import uygulama2 from '../../assets/kapi.png';
 import kurumsaljpg from '../../assets/kurumsal.jpg';
 import aboutus from '../../assets/aboutus.jpg';
 
@@ -21,6 +23,7 @@ class Corporate extends Component {
   };
 
   render() {
+    console.log(this.props.match.params)
     const { chart, loading } = this.props;
 
     const halfPageTabCol = {
@@ -52,14 +55,14 @@ class Corporate extends Component {
             <img style={{ width: '100%', height: 'auto' }} src={kurumsaljpg} />
           </Suspense>
         </div>
-        <Tabs defaultActiveKey={this.props.match.path.substr(11, 100)} onChange={callback}>
+        <Tabs defaultActiveKey={this.props.location.pathname.substr(11, 100)} onChange={callback}>
           <TabPane tab="Faaliyetler" key="activities">
             <HeaderBox header={formatMessage({id: 'activities'})} />
             <Suspense fallback={<PageLoading />}>
               <Row gutter={24}>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
+                    title="Faaliyet İsmi blabla"
                     extra={<a href="#">More</a>}
                     cover={<img alt="uzunmamuller" src={all} />}
                   >
@@ -71,7 +74,7 @@ class Corporate extends Component {
                 </Col>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
+                    title="Faaliyet İsmi blabla"
                     extra={<a href="#">More</a>}
                     cover={<img alt="uzunmamuller" src={all} />}
                   >
@@ -83,7 +86,7 @@ class Corporate extends Component {
                 </Col>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
+                    title="Faaliyet İsmi blabla"
                     extra={<a href="#">More</a>}
                     cover={<img alt="uzunmamuller" src={all} />}
                   >
@@ -95,7 +98,7 @@ class Corporate extends Component {
                 </Col>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
+                    title="Faaliyet İsmi blabla"
                     extra={<a href="#">More</a>}
                     cover={<img alt="uzunmamuller" src={all} />}
                   >
@@ -114,49 +117,23 @@ class Corporate extends Component {
               <Row gutter={24}>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
-                    extra={<a href="#">More</a>}
-                    cover={<img alt="uzunmamuller" src={all} />}
+                    title="Ferforje Bahçe Kapısı"
+                    extra={<a href="#">Daha fazla</a>}
+                    cover={<img alt="ugyulama1" src={uygulama2} />}
                   >
                     <Meta
-                      title={<FormattedMessage id="faaliyet1_title" />}
-                      description={formatMessage({ id: 'faaliyet1_desc' })}
+                      description={formatMessage({ id: 'uygulama_desc' })}
                     />
                   </Card>
                 </Col>
                 <Col {...halfPageTabCol}>
                   <Card
-                    title="Faaliyer İsmi blabla"
-                    extra={<a href="#">More</a>}
-                    cover={<img alt="uzunmamuller" src={all} />}
+                    title="Ferforje Merdiven"
+                    extra={<a href="#">Daha fazla</a>}
+                    cover={<img alt="ugyulama2" src={uygulama1} />}
                   >
                     <Meta
-                      title={<FormattedMessage id="faaliyet1_title" />}
-                      description={formatMessage({ id: 'faaliyet1_desc' })}
-                    />
-                  </Card>
-                </Col>
-                <Col {...halfPageTabCol}>
-                  <Card
-                    title="Faaliyer İsmi blabla"
-                    extra={<a href="#">More</a>}
-                    cover={<img alt="uzunmamuller" src={all} />}
-                  >
-                    <Meta
-                      title={<FormattedMessage id="faaliyet1_title" />}
-                      description={formatMessage({ id: 'faaliyet1_desc' })}
-                    />
-                  </Card>
-                </Col>
-                <Col {...halfPageTabCol}>
-                  <Card
-                    title="Faaliyer İsmi blabla"
-                    extra={<a href="#">More</a>}
-                    cover={<img alt="uzunmamuller" src={all} />}
-                  >
-                    <Meta
-                      title={<FormattedMessage id="faaliyet1_title" />}
-                      description={formatMessage({ id: 'faaliyet1_desc' })}
+                      description={formatMessage({ id: 'uygulama_desc2' })}
                     />
                   </Card>
                 </Col>
@@ -168,7 +145,7 @@ class Corporate extends Component {
             <Suspense fallback={<PageLoading />}>
               <Row gutter={24}>
                 <Col {...fullPageTabCol}>
-                  <Card title="İSFER Yönetim Kurulu Sunar" extra={<a href="#">More</a>}>
+                  <Card>
                     <Meta
                       title={<FormattedMessage id="aboutus_init" />}
                       description={formatMessage({ id: 'aboutus_text' })}
@@ -178,9 +155,6 @@ class Corporate extends Component {
                     </div>
                     <div style={{ marginTop: '10px' }}>
                       <FormattedMessage id="aboutus_footer2" />
-                    </div>
-                    <div style={{ marginTop: '10px' }}>
-                      <FormattedMessage id="aboutus_footer3" />
                     </div>
                   </Card>
                 </Col>

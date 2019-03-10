@@ -1,6 +1,6 @@
 import React, { Component, Suspense, PureComponent } from 'react';
 import { connect } from 'dva';
-import { Row, Col, Icon, Menu, Dropdown, Card, Tabs, Form, Button, Input, notification } from 'antd';
+import { Row, Col, Icon, Mec, Dropdown, Card, Tabs, Form, Button, Input, notification } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 
@@ -34,13 +34,13 @@ class ProductTabs extends PureComponent {
         let firstTimeAdd = true
         cart.map((obj)=> {
           let index = cart.indexOf(obj)
-          if (product in obj) {
+          if (obj.name == product) {
             firstTimeAdd = false;
-            cart[index][product] =  parseInt(cart[index][product]) + parseInt(weight)
+            cart[index].weight = parseInt(cart[index].weight) + parseInt(weight)
           }
         })
         if (firstTimeAdd) {
-          cart.push({[product]: weight})
+          cart.push({weight: weight, name: product})
         }
         localStorage.setItem('cart', JSON.stringify(cart))
         this.setState({willShop: Object.assign({}, this.state.willShop, {[product]: ''})}, ()=> {this.props.form.resetFields()})
@@ -72,7 +72,6 @@ class ProductTabs extends PureComponent {
       style: { marginBottom: 24 },
     };
     const { Meta } = Card;
-    let currentProduct = this.state.product
     const {
       form: { getFieldDecorator, getFieldValue },
     } = this.props;
@@ -101,47 +100,41 @@ class ProductTabs extends PureComponent {
         <div>
             <Tabs defaultActiveKey={this.state.product} onChange={this.callback}>
                 {this.props.products.map((product)=> {
-                    {currentProduct = this.state.product.length > 1 ? this.state.product : product}
                     return (
                         <TabPane tab={formatMessage({id: product})} key={product}>
                             <Row>
                                 <Col {...halfPageTabCol}>
-                                    <Card title={formatMessage({id: currentProduct})}
-                                     extra={
+                                    <Card title={formatMessage({id: product})}
+                                      /*extra={
                                        <Col>
                                           <Form layout="inline" hideRequiredMark>
                                             <Form.Item {...FormItemLayout} label={<FormattedMessage id="weight" />}>
                                                 {getFieldDecorator('kg', {
-                                                  iniyialValue: this.state.willShop[currentProduct],                                                  rules: [
-                                                    {
-                                                      required: true,
-                                                      message: formatMessage({ id: 'Önce burası!' }),
-                                                    },
-                                                  ],
-                                                })(<Input type="number" placeholder="Kg" onChange={(e)=> {this.setState({willShop: Object.assign({}, this.state.willShop, {[currentProduct]: e.target.value})})}} />)}
+                                                  iniyialValue: this.state.willShop[product],
+                                                })(<Input type="number" placeholder="Kg" onChange={(e)=> {this.setState({willShop: Object.assign({}, this.state.willShop, {[product]: e.target.value})})}} />)}
                                               </Form.Item>
                                               <Form.Item>
                                                 <Icon type="caret-right" />
                                               </Form.Item>
                                               <Form.Item {...submitFormLayout}>
-                                                <Button type="primary" onClick={()=>this.addProduct(currentProduct, this.state.willShop[currentProduct])}>
+                                                <Button type="primary" onClick={()=>this.addProduct(product, this.state.willShop[product])}>
                                                   {formatMessage({id: 'add_to_cart'})}<Icon type="plus" />
                                                 </Button>
                                               </Form.Item>
                                           </Form>
                                        </Col>
-                                    }
-                                     cover={ <img alt={currentProduct} src={images[`${currentProduct}.png`]} /> }>
+                                    } */
+                                     cover={ <img alt={product} src={images[`${product}.png`]} /> }>
                                         <Meta
                                         title={<FormattedMessage id="description" />}
-                                        description={formatMessage({ id: `${currentProduct}_desc` })}
+                                        description={formatMessage({ id: `${product}_desc` })}
                                         />
                                     </Card>
                                 </Col>
                                 <Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
-                                    <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={currentProduct} src={images[`${currentProduct}2.png`]} /> }>
+                                    <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={product} src={images[`${product}2.png`]} /> }>
                                         <Meta
-                                        description={formatMessage({ id: `${currentProduct}_usage` })}
+                                        description={formatMessage({ id: `${product}_usage` })}
                                         />
                                     </Card>
                                 </Col>

@@ -43,7 +43,6 @@ export default [
           {
             path: '/products/uzunmamuller',
             name: 'Uzun Mamüller',
-            component: './Products',
             routes: [
               {
                 path: '/products/uzunmamuller/insaatdemiri',
@@ -62,7 +61,7 @@ export default [
               },
               {
                 path: '/products/uzunmamuller/inp',
-                name: 'INP(NPI)/UNP(NPU) Profiller',
+                name: 'NPI / NPU Profiller',
                 component: './Products',
               },
               {
@@ -92,7 +91,7 @@ export default [
               },
               {
                 path: '/products/uzunmamuller/t-demiri',
-                name: 'T-Demiri',
+                name: 'T Demiri',
                 component: './Products',
               },
               {
@@ -108,27 +107,22 @@ export default [
             routes: [
               {
                 path: '/products/yassimamuller/shr',
-                name: 'Sıcak Haddelenmiş Rulo / Paket Sac',
-                component: './Products',
-              },
-              {
-                path: '/products/yassimamuller/shl',
-                name: 'Sıcak Haddelenmiş Levha Sac',
+                name: 'Rulo / Paket / Levha Sac',
                 component: './Products',
               },
               {
                 path: '/products/yassimamuller/dkp',
-                name: 'Sıcak Haddelenmiş(DKP) Rulo',
+                name: 'DKP Sac',
                 component: './Products',
               },
               {
                 path: '/products/yassimamuller/hrp',
-                name: 'HRP Rulo / Paket Sac(Asitlenmiş Sac)',
+                name: 'HRP Sac',
                 component: './Products',
               },
               {
                 path: '/products/yassimamuller/gr',
-                name: 'Galvanizli Rulo / Paket Sac',
+                name: 'Galvanizli Sac',
                 component: './Products',
               },
               {
@@ -178,11 +172,6 @@ export default [
                 component: './Products',
               },
               {
-                path: '/products/profiller/ssb',
-                name: 'Saw Spiral Borular',
-                component: './Products',
-              },
-              {
                 path: '/products/profiller/ccb',
                 name: 'Çelik Çekme Borular',
                 component: './Products',
@@ -219,27 +208,35 @@ export default [
         component: './Cart',
       },
       {
-        path: '/tech-info/:product',
+        path: '/tech-info',
         name: 'Teknik Bilgiler',
         icon: 'tool',
         routes: [
-          // profile
           {
-            path: '/profile/basic',
-            name: 'basic',
-            component: './Profile/BasicProfile',
+            path: '/tech-info/calculate',
+            name: 'Ağırlık Hesaplama',
+            routes: [
+              {
+                path: '/tech-info/calculate/yassimamuller',
+                name: 'Yassı Mamül Hesaplama',
+                component: './Tech',
+              },
+              {
+                path: '/tech-info/calculate/profiller',
+                name: 'Boru ve Profil Hesaplama',
+                component: './Tech',
+              },
+              {
+                path: '/tech-info/calculate/lama',
+                name: 'Lama Hesaplama',
+                component: './Tech',
+              },
+            ],
           },
           {
-            path: '/profile/basic/:id',
-            name: 'basic',
-            hideInMenu: true,
-            component: './Profile/BasicProfile',
-          },
-          {
-            path: '/profile/advanced',
-            name: 'advanced',
-            authority: ['admin'],
-            component: './Profile/AdvancedProfile',
+            path: '/tech-info/certificates',
+            name: 'Kalite Belgeleri',
+            component: './Tech',
           },
         ],
       },

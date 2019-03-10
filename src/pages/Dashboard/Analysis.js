@@ -8,10 +8,12 @@ import styles from './Analysis.less';
 import PageLoading from '@/components/PageLoading';
 import { AsyncLoadBizCharts } from '@/components/Charts/AsyncLoadBizCharts';
 import insaat from '../../assets/insaatdemiri.png';
-import karisikdemir from '../../assets/karisikdemir.png';
+import insaatdemiri2 from '../../assets/insaatdemiri2.png';
 import kaynak from '../../assets/kaynak.png';
-import yassi from '../../assets/yassi.png';
-import { InstanceChainMap } from 'lodash-decorators/factory';
+import boruveproiller from '../../assets/boruveprofiller.png';
+import shr from '../../assets/shr.png';
+import hrpsmall from '../../assets/hrpsmall.png';
+import profil from '../../assets/profil.png';
 
 const IntroduceRow = React.lazy(() => import('./IntroduceRow'));
 
@@ -42,16 +44,16 @@ class Analysis extends Component {
           <Suspense fallback={null}>
             <Carousel autoplay arrows={true} draggable={true}>
               <div>
-                <img src={yassi} style={{ width: '100%', height: 'auto' }} />
+                <img src={profil} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={karisikdemir} style={{ width: '100%', height: 'auto' }} />
+                <img src={shr} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={insaat} style={{ width: '100%', height: 'auto' }} />
+                <img src={boruveproiller} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={kaynak} style={{ width: '100%', height: 'auto' }} />
+                <img src={insaatdemiri2} style={{ width: '100%', height: 'auto' }} />
               </div>
             </Carousel>
           </Suspense>

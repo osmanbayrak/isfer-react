@@ -4,6 +4,8 @@ import { Menu, Icon } from 'antd';
 import classNames from 'classnames';
 import HeaderDropdown from '../HeaderDropdown';
 import styles from './index.less';
+import turkeyFlag from '../../../public/icons/turkey-flag.png'
+import britishFlag from '../../../public/icons/uk-flag.png'
 
 export default class SelectLang extends PureComponent {
   changeLang = ({ key }) => {
@@ -19,8 +21,8 @@ export default class SelectLang extends PureComponent {
       'en-US': 'English',
     };
     const languageIcons = {
-      'tr-TR': '🇹🇷',
-      'en-US': '🇬🇧',
+      'tr-TR': <img src={turkeyFlag} />,
+      'en-US': <img src={britishFlag} />,
     };
     const langMenu = (
       <Menu className={styles.menu} selectedKeys={[selectedLang]} onClick={this.changeLang}>

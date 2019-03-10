@@ -33,15 +33,15 @@ class Products extends PureComponent {
       })
     } else if (url.indexOf('yassimamuller') > -1) {
       this.setState({
-        productName: url.substr(22,100),
+        productName: url.substr(24,100),
         productCategory: 'yassimamuller',
-        products: ['shr', 'shl', 'dkp', 'hrp', 'gr', 'bs', 'bgds', 'tos', 'gds']
+        products: ['shr', 'dkp', 'hrp', 'gr', 'bs', 'bgds', 'tos', 'gds']
       })
     } else if (url.indexOf('profiller') > -1) {
       this.setState({
-        productName: url.substr(19,100),
+        productName: url.substr(20,100),
         productCategory: 'profiller',
-        products: ['kdkp', 'gkpb', 'sb', 'sgb', 'ssb', 'ccb']
+        products: ['kdkp', 'gkpb', 'sb', 'sgb', 'ccb']
       })
     }
   }
@@ -57,7 +57,6 @@ class Products extends PureComponent {
   }
 
   render() {
-    let url = this.props.location.pathname;
     const { chart, loading } = this.props;
     const { Meta } = Card;
 
