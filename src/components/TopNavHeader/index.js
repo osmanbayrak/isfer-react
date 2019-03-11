@@ -23,6 +23,7 @@ export default class TopNavHeader extends PureComponent {
     const flatMenuKeys = getFlatMenuKeys(menuData);
     return (
       <div className={`${styles.head} ${theme === 'light' ? styles.light : ''}`}>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
         <div
           ref={ref => {
             this.maim = ref;
@@ -40,7 +41,7 @@ export default class TopNavHeader extends PureComponent {
                 maxWidth,
               }}
             >
-              <BaseMenu {...this.props} flatMenuKeys={flatMenuKeys} className={styles.menu} />
+              <BaseMenu style={{fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px'}} {...this.props} flatMenuKeys={flatMenuKeys} className={styles.menu} />
             </div>
           </div>
           <RightContent {...this.props} />

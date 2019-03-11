@@ -6,6 +6,7 @@ import { urlToList } from '../_utils/pathTools';
 import { getMenuMatches } from './SiderMenuUtils';
 import { isUrl } from '@/utils/utils';
 import styles from './index.less';
+import osmanCustom from './osmanCustom.less';
 import IconFont from '@/components/IconFont';
 
 const { SubMenu } = Menu;
@@ -58,6 +59,12 @@ export default class BaseMenu extends PureComponent {
       const { name } = item;
       return (
         <SubMenu
+          style={{
+            fontWeight: '200',
+            fontFamily: 'Montserrat',
+            fontSize: '10px', 
+            backgroundColor: 'transparent'
+          }}
           title={
             item.icon ? (
               <span>
@@ -74,12 +81,10 @@ export default class BaseMenu extends PureComponent {
         </SubMenu>
       );
     }
-    return <Menu.Item key={item.path}>{this.getMenuItemPath(item)}</Menu.Item>;
+    return <Menu.Item style={{fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px', backgroundColor: 'transparent'}} key={item.path}>{this.getMenuItemPath(item)}</Menu.Item>;
   };
 
   /**
-   * 判断是否是http链接.返回 Link 或 a
-   * Judge whether it is http link.return a or Link
    * @memberof SiderMenu
    */
   getMenuItemPath = item => {

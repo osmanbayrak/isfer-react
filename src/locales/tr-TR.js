@@ -13,6 +13,10 @@ import component from './tr-TR/component';
 import products from './tr-TR/products';
 
 export default {
+  long_products: 'Uzun Mamüller',
+  flat_products: 'Yassı Mamüller',
+  profile_products: 'Profiller',
+  decorative_products: 'Dekoratif Mamüller',
   en: 'En(m)',
   boy: 'Boy(m)',
   et: 'Et(mm)',

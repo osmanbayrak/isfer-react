@@ -8,37 +8,45 @@ export default [
       { path: '/', redirect: '/home' },
       {
         path: '/home',
-        name: 'Anasayfa',
-        icon: 'home',
+        name: 'ANASAYFA',
         component: './Dashboard/Analysis',
       },
       // list
       {
         path: '/corporate',
-        icon: 'solution',
-        name: 'Kurumsal',
+        name: 'KURUMSAL',
         routes: [
           {
-            path: '/corporate/activities',
-            name: 'Faaliyetler',
-            component: './Corporate',
-          },
-          {
-            path: '/corporate/applications',
-            name: 'Uygulamalar',
+            path: '/corporate/announces',
+            name: 'DUYURULAR',
             component: './Corporate',
           },
           {
             path: '/corporate/about',
-            name: 'Hakkımızda',
+            name: 'HAKKIMIZDA',
             component: './Corporate',
           },
         ],
       },
       {
+        path: '/activities',
+        name: 'FAALİYETLER',
+        routes: [
+          {
+            path: '/activities/production',
+            name: 'Üretim',
+            component: './Activities',
+          },
+          {
+            path: '/activities/applications',
+            name: 'Uygulamalar',
+            component: './Activities',
+          },
+        ],
+      },
+      {
         path: '/products',
-        name: 'Ürünler',
-        icon: 'appstore',
+        name: 'ÜRÜNLER',
         routes: [
           {
             path: '/products/uzunmamuller',
@@ -181,36 +189,18 @@ export default [
           {
             path: '/products/dekoratifler',
             name: 'Dekoratif Demirler',
-            routes: [
-              {
-                path: '/products/dekoratifler/ferforje-ayak',
-                name: 'Ferforje Ayak',
-                component: './Products',
-              },
-              {
-                path: '/products/dekoratifler/ferforje-kapi',
-                name: 'Ferforje Kapı',
-                component: './Products',
-              },
-              {
-                path: '/products/dekoratifler/ferforje-merdiven',
-                name: 'Ferforje Merdiven',
-                component: './Products',
-              },
-            ],
+            component: './Products',
           },
         ],
       },
       {
         path: '/cart',
-        name: 'Sepetim',
-        icon: 'shopping-cart',
+        name: 'SEPETİM',
         component: './Cart',
       },
       {
         path: '/tech-info',
-        name: 'Teknik Bilgiler',
-        icon: 'tool',
+        name: 'TEKNİK BİLGİLER',
         routes: [
           {
             path: '/tech-info/calculate',
@@ -242,8 +232,7 @@ export default [
       },
       {
         path: '/contact',
-        name: 'İletişim',
-        icon: 'phone',
+        name: 'İLETİŞİM',
         component: './Dashboard/Analysis',
       },
       {

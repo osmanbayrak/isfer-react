@@ -103,8 +103,9 @@ class ProductTabs extends PureComponent {
                     return (
                         <TabPane tab={formatMessage({id: product})} key={product}>
                             <Row>
-                                <Col {...halfPageTabCol}>
+                                <Col {...fullPageTabCol}>
                                     <Card title={formatMessage({id: product})}
+                                      extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>}
                                       /*extra={
                                        <Col>
                                           <Form layout="inline" hideRequiredMark>
@@ -131,13 +132,13 @@ class ProductTabs extends PureComponent {
                                         />
                                     </Card>
                                 </Col>
-                                <Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
+                                {/*<Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
                                     <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={product} src={images[`${product}2.png`]} /> }>
                                         <Meta
                                         description={formatMessage({ id: `${product}_usage` })}
                                         />
                                     </Card>
-                                </Col>
+                                  </Col> */}
                             </Row>
                         </TabPane> 
                     )

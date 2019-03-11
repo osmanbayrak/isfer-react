@@ -71,6 +71,8 @@ export default {
   theme: {
     'primary-color': defaultSettings.primaryColor,
     'layout-header-background': defaultSettings.darkColor,
+    'menu-bg': 'red',
+    'menu-item-active-bg': 'red',
     'menu-dark-submenu-bg': '#05213a',
     'layout-body-background': 'aliceblue',
     'modal-header-bg': 'aliceblue',
