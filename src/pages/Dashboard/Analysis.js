@@ -16,6 +16,8 @@ import hrpsmall from '../../assets/hrpsmall.png';
 import profil from '../../assets/profil.png';
 
 const IntroduceRow = React.lazy(() => import('./IntroduceRow'));
+const ActivitiesRow = React.lazy(() => import('./ActivitiesRow'));
+const ProductionRow = React.lazy(() => import('./ProductionRow'));
 
 @connect(({ chart, loading }) => ({
   chart,
@@ -40,7 +42,7 @@ class Analysis extends Component {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-90px' }}>
           <Suspense fallback={null}>
             <Carousel autoplay arrows={true} draggable={true}>
               <div>
@@ -61,6 +63,14 @@ class Analysis extends Component {
         <HeaderBox header={'Ürün Grupları'} />
         <Suspense fallback={<PageLoading />}>
           <IntroduceRow loading={loading} />
+        </Suspense>
+        <HeaderBox header={'Faaliyetler'} />
+        <Suspense fallback={<PageLoading />}>
+          <ActivitiesRow loading={loading} />
+        </Suspense>
+        <HeaderBox header={'Üretim'} />
+        <Suspense fallback={<PageLoading />}>
+          <ProductionRow loading={loading} />
         </Suspense>
       </GridContent>
     );

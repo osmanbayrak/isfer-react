@@ -41,7 +41,7 @@ export default class TopNavHeader extends PureComponent {
                 maxWidth,
               }}
             >
-              <BaseMenu style={{fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px'}} {...this.props} flatMenuKeys={flatMenuKeys} className={styles.menu} />
+              <BaseMenu style={{fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px', color: 'white'}} {...this.props} flatMenuKeys={flatMenuKeys} className={styles.menu} />
             </div>
           </div>
           <RightContent {...this.props} />

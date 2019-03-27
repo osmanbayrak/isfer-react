@@ -31,7 +31,6 @@ const getIcon = icon => {
 
 export default class BaseMenu extends PureComponent {
   /**
-   * 获得菜单子节点
    * @memberof SiderMenu
    */
   getNavMenuItems = menusData => {
@@ -54,12 +53,12 @@ export default class BaseMenu extends PureComponent {
    * get SubMenu or Item
    */
   getSubMenuOrItem = item => {
-    // doc: add hideChildrenInMenu
     if (item.children && !item.hideChildrenInMenu && item.children.some(child => child.name)) {
       const { name } = item;
       return (
         <SubMenu
           style={{
+            color: 'white',
             fontWeight: '200',
             fontFamily: 'Montserrat',
             fontSize: '10px', 
@@ -81,7 +80,7 @@ export default class BaseMenu extends PureComponent {
         </SubMenu>
       );
     }
-    return <Menu.Item style={{fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px', backgroundColor: 'transparent'}} key={item.path}>{this.getMenuItemPath(item)}</Menu.Item>;
+    return <Menu.Item style={{ color: 'white', fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px', backgroundColor: 'transparent'}} key={item.path}>{this.getMenuItemPath(item)}</Menu.Item>;
   };
 
   /**
@@ -107,6 +106,7 @@ export default class BaseMenu extends PureComponent {
         to={itemPath}
         target={target}
         replace={itemPath === location.pathname}
+        style={{ color: 'white', fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px', backgroundColor: 'transparent'}} 
         onClick={
           isMobile
             ? () => {
@@ -160,7 +160,7 @@ export default class BaseMenu extends PureComponent {
         theme={theme}
         onOpenChange={handleOpenChange}
         selectedKeys={selectedKeys}
-        style={style}
+        style={{ backgroundColor: 'unset', color: 'white', fontWeight: '200', fontFamily: 'Montserrat', fontSize: '10px'}} 
         className={cls}
         {...props}
       >

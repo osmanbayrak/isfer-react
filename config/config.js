@@ -66,14 +66,13 @@ export default {
   targets: {
     ie: 11,
   },
-  // 路由配置
   routes: pageRoutes,
   theme: {
     'primary-color': defaultSettings.primaryColor,
-    'layout-header-background': defaultSettings.darkColor,
-    'menu-bg': 'red',
-    'menu-item-active-bg': 'red',
-    'menu-dark-submenu-bg': '#05213a',
+    'layout-header-background': 'rgba(2, 26, 51, 0.7)',
+    'menu-bg': 'transparent',
+    'menu-item-active-bg': 'transparent',
+    'menu-dark-submenu-bg': 'transparent',
     'layout-body-background': 'aliceblue',
     'modal-header-bg': 'aliceblue',
     // 'table-header-bg': '#2d577f',
