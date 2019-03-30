@@ -4,7 +4,7 @@ import GlobalFooter from '@/components/GlobalFooter';
 
 const { Footer } = Layout;
 const FooterView = () => (
-  <Footer style={{ padding: 0 }}>
+  <Footer style={{ padding: 0, backgroundColor: 'rgba(2, 26, 51, 1)', color: 'white' }}>
     <GlobalFooter
       links={[
         {

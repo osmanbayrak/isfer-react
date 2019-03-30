@@ -60,15 +60,15 @@ class Analysis extends Component {
             </Carousel>
           </Suspense>
         </div>
-        <HeaderBox header={'Ürün Grupları'} />
+        <HeaderBox header={'ÜRÜN GRUPLARI'} />
         <Suspense fallback={<PageLoading />}>
           <IntroduceRow loading={loading} />
         </Suspense>
-        <HeaderBox header={'Faaliyetler'} />
+        <HeaderBox header={'FAALİYETLER'} />
         <Suspense fallback={<PageLoading />}>
           <ActivitiesRow loading={loading} />
         </Suspense>
-        <HeaderBox header={'Üretim'} />
+        <HeaderBox header={'ÜRETİM'} />
         <Suspense fallback={<PageLoading />}>
           <ProductionRow loading={loading} />
         </Suspense>

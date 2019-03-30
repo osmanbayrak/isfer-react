@@ -5,7 +5,10 @@ import BaseMenu from '../SiderMenu/BaseMenu';
 import { getFlatMenuKeys } from '../SiderMenu/SiderMenuUtils';
 import styles from './index.less';
 import { title } from '../../defaultSettings';
+import withScroll from './scrollDetector';
 
+
+@withScroll
 export default class TopNavHeader extends PureComponent {
   state = {
     maxWidth: undefined,
@@ -18,11 +21,15 @@ export default class TopNavHeader extends PureComponent {
   }
 
   render() {
+    let opacityColor = 'transparent'
+    if (this.props.scrollPosition > 80) {
+      opacityColor = 'rgba(2, 26, 51, 1)'
+    }
     const { theme, contentWidth, menuData, logo } = this.props;
     const { maxWidth } = this.state;
     const flatMenuKeys = getFlatMenuKeys(menuData);
     return (
-      <div className={`${styles.head} ${theme === 'light' ? styles.light : ''}`}>
+      <div style={{backgroundColor: opacityColor}} className={`${styles.head} ${theme === 'light' ? styles.light : ''}`}>
       <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
         <div
           ref={ref => {

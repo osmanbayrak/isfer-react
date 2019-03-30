@@ -73,8 +73,11 @@ export default {
     'menu-bg': 'transparent',
     'menu-item-active-bg': 'transparent',
     'menu-dark-submenu-bg': 'transparent',
-    'layout-body-background': 'aliceblue',
+    'layout-body-background': 'white',
     'modal-header-bg': 'aliceblue',
+    'font-size-base': '10px',
+    'font-family': 'Montserrat',
+    'component-background': 'whitesmoke'
     // 'table-header-bg': '#2d577f',
     // 'table-header-color': 'whitesmoke',
     // 'table-header-sort-bg': '#2d577f',

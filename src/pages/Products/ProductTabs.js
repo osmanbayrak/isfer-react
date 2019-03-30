@@ -103,7 +103,7 @@ class ProductTabs extends PureComponent {
                     return (
                         <TabPane tab={formatMessage({id: product})} key={product}>
                             <Row>
-                                <Col {...fullPageTabCol}>
+                                <Col {...halfPageTabCol}>
                                     <Card title={formatMessage({id: product})}
                                       extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>}
                                       /*extra={
