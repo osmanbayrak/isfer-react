@@ -17,7 +17,6 @@ export default class HeaderBox extends PureComponent {
     };
     return (
         <Row>
-            <PageHeaderWrapper style={{float: 'left'}}></PageHeaderWrapper>
             <Col {...midColResponsiveProps}>
             <h3 style={{textAlign: 'center', marginTop: '20px', fontSize: '20px', fontWeight: '600', fontFamily: 'Oswald', letterSpacing: '5px', textTransform: 'uppercase'}}>{formatMessage({id: this.props.header ? this.props.header : ' '})}</h3>
             <Card

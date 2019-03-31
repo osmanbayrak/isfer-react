@@ -6,7 +6,7 @@ import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import HeaderBox from '@/components/HeaderBox';
 import PageLoading from '@/components/PageLoading';
 import ProductTabs from './ProductTabs';
-import all from '../../assets/all2.jpg';
+import productsTop from '../../assets/productsTop.png';
 
 const TabPane = Tabs.TabPane;
 
@@ -29,7 +29,7 @@ class Products extends PureComponent {
       this.setState({
         productName: url.substr(23,100),
         productCategory: 'uzunmamuller',
-        products: ['insaatdemiri', 'celikhasir', 'filmasin', 'inp', 'hea', 'kosebent', 'lama', 'karedd', 'dyd', 't-demiri', 'transmisyon']
+        products: ['insaatdemiri', 'celikhasir', 'inp', 'hea', 'kosebent', 'lama', 'karedd', 'dyd', 't-demiri', 'transmisyon']
       })
     } else if (url.indexOf('yassimamuller') > -1) {
       this.setState({
@@ -41,7 +41,7 @@ class Products extends PureComponent {
       this.setState({
         productName: url.substr(20,100),
         productCategory: 'profiller',
-        products: ['kdkp', 'gkpb', 'sb', 'sgb', 'ccb']
+        products: ['kdkp', 'gkpb', 'sb', 'ccb', 'bkp']
       })
     }
   }
@@ -66,9 +66,9 @@ class Products extends PureComponent {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-90px' }}>
           <Suspense fallback={null}>
-            <img style={{ width: '100%', height: 'auto' }} src={all} />
+            <img style={{ width: '100%', height: 'auto' }} src={productsTop} />
           </Suspense>
         </div>
         <HeaderBox header={this.state.productCategory} />

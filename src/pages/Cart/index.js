@@ -5,10 +5,10 @@ import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import HeaderBox from '@/components/HeaderBox';
 import all from '../../assets/all2.jpg';
-import kurumsaljpg from '../../assets/kurumsal.jpg';
 import orderImg from '../../assets/order2.png';
 import data from '../../data';
 import styles from './index.less';
+import cartTop from '../../assets/cartTop.png';
 
 const FormItem = Form.Item;
 const { Option } = Select;
@@ -104,9 +104,9 @@ class Cart extends Component {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-90px' }}>
           <Suspense fallback={null}>
-            <img style={{ width: '100%', height: 'auto' }} src={orderImg} />
+            <img style={{ width: '100%', height: 'auto' }} src={cartTop} />
           </Suspense>
         </div>
         <HeaderBox header={formatMessage({id: 'cart'})} />

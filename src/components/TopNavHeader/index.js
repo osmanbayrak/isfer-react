@@ -22,7 +22,7 @@ export default class TopNavHeader extends PureComponent {
 
   render() {
     let opacityColor = 'transparent'
-    if (this.props.scrollPosition > 80) {
+    if (this.props.scrollPosition > 110) {
       opacityColor = 'rgba(2, 26, 51, 1)'
     }
     const { theme, contentWidth, menuData, logo } = this.props;

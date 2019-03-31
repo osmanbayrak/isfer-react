@@ -7,6 +7,7 @@ import PageLoading from '@/components/PageLoading';
 import HeaderBox from '@/components/HeaderBox';
 import all from '../../assets/all2.jpg';
 import techpng from '../../assets/techinfo.jpg';
+import techTop from '../../assets/techTop.png';
 
 const TabPane = Tabs.TabPane;
 const FormItem = Form.Item;
@@ -67,8 +68,8 @@ class Tech extends Component {
     function callback(key) { console.log(''); }
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
-          <img style={{ width: '100%', height: 'auto' }} src={techpng} />
+        <div style={{ margin: '-24px -24px 0', marginTop: '-90px' }}>
+          <img style={{ width: '100%', height: 'auto' }} src={techTop} />
         </div>
         <Tabs defaultActiveKey={this.state.section} onChange={callback}>
           <TabPane forceRender={true} tab="Ağırlık Hesaplama" key="calculate">

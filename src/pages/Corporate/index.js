@@ -5,11 +5,7 @@ import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
 import HeaderBox from '@/components/HeaderBox';
-import all from '../../assets/all2.jpg';
-import uygulama1 from '../../assets/uygulama2.png';
-import uygulama2 from '../../assets/kapi.png';
-import kurumsaljpg from '../../assets/kurumsal.jpg';
-import aboutus from '../../assets/aboutus.jpg';
+import corporateTop from '../../assets/corporateTop.png';
 
 const TabPane = Tabs.TabPane;
 
@@ -50,9 +46,9 @@ class Corporate extends Component {
 
     return (
       <GridContent>
-        <div style={{ margin: '-24px -24px 0', marginTop: '-25px' }}>
+        <div style={{ margin: '-24px -24px 0', marginTop: '-90px' }}>
           <Suspense fallback={null}>
-            <img style={{ width: '100%', height: 'auto' }} src={kurumsaljpg} />
+            <img style={{ width: '100%', height: 'auto' }} src={corporateTop} />
           </Suspense>
         </div>
         <Tabs defaultActiveKey={this.props.location.pathname.substr(11, 100)} onChange={callback}>

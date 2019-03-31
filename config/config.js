@@ -70,8 +70,6 @@ export default {
   theme: {
     'primary-color': defaultSettings.primaryColor,
     'layout-header-background': 'rgba(2, 26, 51, 0.7)',
-    'menu-bg': 'transparent',
-    'menu-item-active-bg': 'transparent',
     'menu-dark-submenu-bg': 'transparent',
     'layout-body-background': 'white',
     'modal-header-bg': 'aliceblue',

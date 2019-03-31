@@ -6,16 +6,12 @@ import { getTimeDistance } from '@/utils/utils';
 import HeaderBox from '@/components/HeaderBox';
 import styles from './Analysis.less';
 import PageLoading from '@/components/PageLoading';
-import { AsyncLoadBizCharts } from '@/components/Charts/AsyncLoadBizCharts';
-import insaat from '../../assets/insaatdemiri.png';
-import insaatdemiri2 from '../../assets/insaatdemiri2.png';
-import kaynak from '../../assets/kaynak.png';
-import boruveproiller from '../../assets/boruveprofiller.png';
-import shr from '../../assets/shr.png';
-import hrpsmall from '../../assets/hrpsmall.png';
-import profil from '../../assets/profil.png';
+import anasayfa1 from '../../assets/anasayfa1.png';
+import anasayfa2 from '../../assets/anasayfa2.png';
+import anasayfa3 from '../../assets/anasayfa3.png';
+import anasayfa4 from '../../assets/anasayfa4.png';
 
-const IntroduceRow = React.lazy(() => import('./IntroduceRow'));
+const ProductsRow = React.lazy(() => import('./ProductsRow'));
 const ActivitiesRow = React.lazy(() => import('./ActivitiesRow'));
 const ProductionRow = React.lazy(() => import('./ProductionRow'));
 
@@ -46,31 +42,31 @@ class Analysis extends Component {
           <Suspense fallback={null}>
             <Carousel autoplay arrows={true} draggable={true}>
               <div>
-                <img src={profil} style={{ width: '100%', height: 'auto' }} />
+                <img src={anasayfa1} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={shr} style={{ width: '100%', height: 'auto' }} />
+                <img src={anasayfa2} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={boruveproiller} style={{ width: '100%', height: 'auto' }} />
+                <img src={anasayfa3} style={{ width: '100%', height: 'auto' }} />
               </div>
               <div>
-                <img src={insaatdemiri2} style={{ width: '100%', height: 'auto' }} />
+                <img src={anasayfa4} style={{ width: '100%', height: 'auto' }} />
               </div>
             </Carousel>
           </Suspense>
         </div>
         <HeaderBox header={'ÜRÜN GRUPLARI'} />
         <Suspense fallback={<PageLoading />}>
-          <IntroduceRow loading={loading} />
-        </Suspense>
-        <HeaderBox header={'FAALİYETLER'} />
-        <Suspense fallback={<PageLoading />}>
-          <ActivitiesRow loading={loading} />
+          <ProductsRow loading={loading} />
         </Suspense>
         <HeaderBox header={'ÜRETİM'} />
         <Suspense fallback={<PageLoading />}>
           <ProductionRow loading={loading} />
+        </Suspense>
+        <HeaderBox header={'UYGULAMALAR'} />
+        <Suspense fallback={<PageLoading />}>
+          <ActivitiesRow loading={loading} />
         </Suspense>
       </GridContent>
     );
@@ -78,7 +74,5 @@ class Analysis extends Component {
 }
 
 export default props => (
-  <AsyncLoadBizCharts>
-    <Analysis {...props} />
-  </AsyncLoadBizCharts>
+  <Analysis {...props} />
 );

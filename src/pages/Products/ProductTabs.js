@@ -98,38 +98,22 @@ class ProductTabs extends PureComponent {
 
     return (
         <div>
-            <Tabs defaultActiveKey={this.state.product} onChange={this.callback}>
+            <Tabs defaultActiveKey={this.state.product} tabPosition="left" onChange={this.callback}>
                 {this.props.products.map((product)=> {
                     return (
                         <TabPane tab={formatMessage({id: product})} key={product}>
                             <Row>
                                 <Col {...halfPageTabCol}>
-                                    <Card title={formatMessage({id: product})}
+                                    <Card style={{textTransform: 'uppercase'}} title={formatMessage({id: product})}
                                       extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>}
-                                      /*extra={
-                                       <Col>
-                                          <Form layout="inline" hideRequiredMark>
-                                            <Form.Item {...FormItemLayout} label={<FormattedMessage id="weight" />}>
-                                                {getFieldDecorator('kg', {
-                                                  iniyialValue: this.state.willShop[product],
-                                                })(<Input type="number" placeholder="Kg" onChange={(e)=> {this.setState({willShop: Object.assign({}, this.state.willShop, {[product]: e.target.value})})}} />)}
-                                              </Form.Item>
-                                              <Form.Item>
-                                                <Icon type="caret-right" />
-                                              </Form.Item>
-                                              <Form.Item {...submitFormLayout}>
-                                                <Button type="primary" onClick={()=>this.addProduct(product, this.state.willShop[product])}>
-                                                  {formatMessage({id: 'add_to_cart'})}<Icon type="plus" />
-                                                </Button>
-                                              </Form.Item>
-                                          </Form>
-                                       </Col>
-                                    } */
-                                     cover={ <img alt={product} src={images[`${product}.png`]} /> }>
-                                        <Meta
-                                        title={<FormattedMessage id="description" />}
-                                        description={formatMessage({ id: `${product}_desc` })}
-                                        />
+                                      cover={ <img alt={product} src={images[`${product}.png`]} /> }>
+                                    </Card>
+                                </Col>
+                                <Col {...halfPageTabCol} style={{marginLeft: '10px'}}>
+                                    <Card title={formatMessage({id: 'description'})}>
+                                      <p>
+                                        {formatMessage({id: `${product}_description`})}
+                                      </p>
                                     </Card>
                                 </Col>
                                 {/*<Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>

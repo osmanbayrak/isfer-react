@@ -175,13 +175,13 @@ export default [
                 component: './Products',
               },
               {
-                path: '/products/profiller/sgb',
-                name: 'SU ve GAZ BORULARI',
+                path: '/products/profiller/ccb',
+                name: 'ÇELİK ÇEKME BORULAR',
                 component: './Products',
               },
               {
-                path: '/products/profiller/ccb',
-                name: 'ÇELİK ÇEKME BORULAR',
+                path: '/products/profiller/bkp',
+                name: 'BOYALI KUTU PROFİLLER',
                 component: './Products',
               },
             ],
@@ -233,7 +233,7 @@ export default [
       {
         path: '/contact',
         name: 'İLETİŞİM',
-        component: './Dashboard/Analysis',
+        component: './Contact',
       },
       {
         component: '404',
