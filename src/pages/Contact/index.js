@@ -1,17 +1,13 @@
 import React, { Component, Suspense } from 'react';
 import { connect } from 'dva';
-import { Row, Col, Icon, Menu, Dropdown, Carousel, Card, Tabs, Form, Input, Button } from 'antd';
+import { Row, Col, Icon, Card, Form, Input, Button } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
+import router from 'umi/router';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
 import HeaderBox from '@/components/HeaderBox';
-import uygulama1 from '../../assets/uygulama1.png';
-import uygulama2 from '../../assets/uygulama2.png';
-import production1 from '../../assets/production1.png';
-import production2 from '../../assets/production2.png';
-import production3 from '../../assets/production3.png';
-import production4 from '../../assets/production4.png';
 import contactTop from '../../assets/contactTop.png';
+import GoogleMapReact from 'google-map-react';
 
 const FormItem = Form.Item;
 const { TextArea } = Input;
@@ -113,12 +109,16 @@ class Contact extends Component {
                 <Col {...thirdPageTabCol}>
                   <Card
                     title="HARİTA"
-                    cover={<img alt="production" src={production3} />}
                   >
-                    <Meta
-                      title={<FormattedMessage id="production_title3" />}
-                      description={formatMessage({ id: 'production_description3' })}
-                    />
+                    <div style={{ height: '100vh', width: '100%' }}>
+                      <GoogleMapReact
+                        bootstrapURLKeys={{ key: 'AIzaSyDdZvBtpwkDznaAyTrw9gNQOlTxTx0bjSQ' }}
+                        defaultCenter={{ lat: 40.9088, lng: 29.30 }}
+                        defaultZoom={11}
+                      >
+                        <div lat={40.9088} lng={29.30}><Icon style={{fontSize: '18px'}} type="environment" theme="twoTone" /><div>İSFER</div></div>
+                      </GoogleMapReact>
+                    </div>
                   </Card>
                 </Col>
               </Row>
