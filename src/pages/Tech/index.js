@@ -99,7 +99,7 @@ class Tech extends Component {
                       </Button>
                     </FormItem>
                   </Form>
-                  {this.state[category].result > 0 ? <Row  style={{marginTop: '16px'}} gutter={24}>
+                  {this.state.category && this.state.category.result > 0 ? <Row  style={{marginTop: '16px'}} gutter={24}>
                     <Col {...{xs: {span: 24}, sm: {span: 4, offset: 1}}}>
                         <span>
                           Result:
@@ -116,10 +116,10 @@ class Tech extends Component {
             </Row>
           </TabPane>
           <TabPane forceRender={true} tab="Kalite Belgeleri" key="certifica">
-            <HeaderBox header={formatMessage({id: 'activities'})} />
+            <HeaderBox header={formatMessage({id: 'Kalite Belgeleri'})} />
             <Row gutter={24}>
               <Col {...fullPageTabCol}>
-                <Card title={this.state.category} cover={<img alt="calcpng" src={all} />}>
+                <Card cover={<img alt="calcpng" src={all} />}>
                   <Meta
                     title={<FormattedMessage id="faaliyet1_title" />}
                     description={formatMessage({ id: 'faaliyet1_desc' })}

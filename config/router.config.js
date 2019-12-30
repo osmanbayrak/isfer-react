@@ -63,11 +63,6 @@ export default [
                 component: './Products',
               },
               {
-                path: '/products/uzunmamuller/filmasin',
-                name: 'FİLMAŞİN',
-                component: './Products',
-              },
-              {
                 path: '/products/uzunmamuller/inp',
                 name: 'NPI / NPU PROFİLLER',
                 component: './Products',

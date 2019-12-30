@@ -1,14 +1,10 @@
 import React, { memo } from 'react';
-import { Row, Col, Icon, Tooltip, Card, Avatar } from 'antd';
+import { Row, Col, Card } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import styles from './Analysis.less';
-import { ChartCard, MiniArea, MiniBar, MiniProgress, Field } from '@/components/Charts';
-import Trend from '@/components/Trend';
-import numeral from 'numeral';
-import Yuan from '@/utils/Yuan';
-import faaliyet1 from '../../assets/faaliyet1.png';
+import faaliyet1 from '../../assets/faaliyet1.jpg';
 import faaliyet2 from '../../assets/faaliyet2.png';
-import faaliyet3 from '../../assets/faaliyet3.png';
+import faaliyet3 from '../../assets/faaliyet3.jpg';
 import faaliyet4 from '../../assets/faaliyet4.png';
 
 const topColResponsiveProps = {
@@ -29,8 +25,7 @@ const ActivitiesRow = memo(({ loading, visitData }) => (
         cover={<img className={styles.rowImages} alt="example" src={faaliyet1} />}
       >
         <Meta
-          title={<FormattedMessage id="Faaliyet Örnek 1" />}
-          description={formatMessage({ id: 'faaliyet1_description' })}
+          title={<FormattedMessage id="Çelik Yapı Uygulaması" />}
         />
       </Card>
     </Col>
@@ -40,8 +35,7 @@ const ActivitiesRow = memo(({ loading, visitData }) => (
         cover={<img className={styles.rowImages} alt="example" src={faaliyet2} />}
       >
         <Meta
-          title={<FormattedMessage id="Faaliyet Örnek 2" />}
-          description={formatMessage({ id: 'faaliyet2_description' })}
+          title={<FormattedMessage id="Çelik Yapı Uygulaması" />}
         />
       </Card>
     </Col>
@@ -51,8 +45,7 @@ const ActivitiesRow = memo(({ loading, visitData }) => (
         cover={<img className={styles.rowImages} alt="example" src={faaliyet3} />}
       >
         <Meta
-          title={<FormattedMessage id="Faaliyet Örnek 3" />}
-          description={formatMessage({ id: 'faaliyet3_description' })}
+          title={<FormattedMessage id="Ferforje Uygulaması" />}
         />
       </Card>
     </Col>
@@ -62,8 +55,7 @@ const ActivitiesRow = memo(({ loading, visitData }) => (
         cover={<img className={styles.rowImages} alt="example" src={faaliyet4} />}
       >
         <Meta
-          title={<FormattedMessage id="Faaliyet Örnek 4" />}
-          description={formatMessage({ id: 'faaliyet4_description' })}
+          title={<FormattedMessage id="Ferforje Uygulaması" />}
         />
       </Card>
     </Col>

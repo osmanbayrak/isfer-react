@@ -13,10 +13,18 @@ import component from './tr-TR/component';
 import products from './tr-TR/products';
 
 export default {
+  name: 'İsim',
+  message: 'Mesajınız',
+  your_message: 'Lütfen mesajınızı buraya yazınız...',
+  contact: 'İLETİŞİM',
+  long_products_index: 'Rulo/Paket/Levha Sac, Dkp, Hrp, Galvanizli Sac, Boyalı Sac, Desenli Sac, Trapez Sac, Genişletilmiş/Delikli Sac.',
+  flat_products_index: 'İnşaat Demiri, Çelik Hasır, Filmaşin, Npı/Npu, Hea/Heb/Ipe, Köşebent, Lama, Kare Dolu Demir, Düz Yuvarlak Demir, T Demiri, Transmisyon ve Soğuk Haddeler.',
+  decorative_products_index: 'Motifler, Panolar, Cumbalar, Sıcak Baskı Desenler, Boğumlu/Yapraklı Parçalar, Mızraklar, Topuzlar',
+  profile_products_index: 'Kutu Profiller, Galvanizli/Boyalı Profiller, Sanayi Boruları, Su ve Gaz Boruları, Çelik Çekme Borular, Spiral Borular',
   long_products: 'Uzun Mamüller',
   flat_products: 'Yassı Mamüller',
-  profile_products: 'Profiller',
-  decorative_products: 'Dekoratif Mamüller',
+  profile_products: 'Profil Ürünleri',
+  decorative_products: 'Dekoratif Ürünler',
   en: 'En(m)',
   boy: 'Boy(m)',
   et: 'Et(mm)',

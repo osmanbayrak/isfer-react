@@ -68,14 +68,15 @@ export default {
   },
   routes: pageRoutes,
   theme: {
+    'text-color-secondary': 'black',
     'primary-color': defaultSettings.primaryColor,
     'layout-header-background': 'rgba(2, 26, 51, 0.7)',
     'menu-dark-submenu-bg': 'transparent',
-    'layout-body-background': 'white',
-    'modal-header-bg': 'aliceblue',
+    // 'layout-body-background': 'white',
+    // 'modal-header-bg': 'aliceblue',
     'font-size-base': '10px',
     'font-family': 'Montserrat',
-    'component-background': 'whitesmoke'
+    // 'component-background': 'whitesmoke'
     // 'table-header-bg': '#2d577f',
     // 'table-header-color': 'whitesmoke',
     // 'table-header-sort-bg': '#2d577f',

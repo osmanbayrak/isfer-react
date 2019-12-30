@@ -1,15 +1,13 @@
 import React, { Component, Suspense } from 'react';
 import { connect } from 'dva';
-import { Row, Col, Icon, Menu, Dropdown, Carousel, Card } from 'antd';
+import { Carousel } from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
-import { getTimeDistance } from '@/utils/utils';
 import HeaderBox from '@/components/HeaderBox';
-import styles from './Analysis.less';
 import PageLoading from '@/components/PageLoading';
-import anasayfa1 from '../../assets/anasayfa1.png';
-import anasayfa2 from '../../assets/anasayfa2.png';
-import anasayfa3 from '../../assets/anasayfa3.png';
-import anasayfa4 from '../../assets/anasayfa4.png';
+import anasayfa1 from '../../assets/ANASAYFA1.JPG';
+import anasayfa2 from '../../assets/ANASAYFA2.JPG';
+import anasayfa3 from '../../assets/ANASAYFA3.JPG';
+import anasayfa4 from '../../assets/ANASAYFA4.JPG';
 
 const ProductsRow = React.lazy(() => import('./ProductsRow'));
 const ActivitiesRow = React.lazy(() => import('./ActivitiesRow'));

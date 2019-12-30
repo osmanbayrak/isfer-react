@@ -5,13 +5,13 @@ import { FormattedMessage, formatMessage } from 'umi/locale';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import PageLoading from '@/components/PageLoading';
 import HeaderBox from '@/components/HeaderBox';
-import uygulama1 from '../../assets/uygulama1.png';
-import uygulama2 from '../../assets/uygulama2.png';
-import production1 from '../../assets/production1.png';
-import production2 from '../../assets/production2.png';
-import production3 from '../../assets/production3.png';
-import production4 from '../../assets/production4.png';
-import activityTop from '../../assets/activityTop.png';
+import uygulama1 from '../../assets/faaliyet1.jpg';
+import uygulama2 from '../../assets/faaliyet2.png';
+import production1 from '../../assets/ferforjeimalatı.png';
+import production2 from '../../assets/lazerKesim.JPG';
+import production3 from '../../assets/KESİMBUKUM.png';
+import production4 from '../../assets/STEELSTRUCTURE.JPG';
+import activityTop from '../../assets/BANNERACTIVITY.png';
 
 const TabPane = Tabs.TabPane;
 

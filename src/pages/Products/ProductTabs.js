@@ -58,43 +58,12 @@ class ProductTabs extends PureComponent {
     const halfPageTabCol = {
         xs: { span: 24, offset: 0 },
         sm: { span: 24, offset: 0 },
-        md: { span: 11, offset: 0 },
-        lg: { span: 11, offset: 0 },
-        xl: { span: 11, offset: 0 },
+        md: { span: 14, offset: 3 },
+        lg: { span: 14, offset: 3 },
+        xl: { span: 14, offset: 3 },
       style: { marginBottom: 24},
     };
-    const fullPageTabCol = {
-      xs: 24,
-      sm: 24,
-      md: 24,
-      lg: 24,
-      xl: 24,
-      style: { marginBottom: 24 },
-    };
     const { Meta } = Card;
-    const {
-      form: { getFieldDecorator, getFieldValue },
-    } = this.props;
-
-    const FormItemLayout = {
-      labelCol: {
-        xs: { span: 10 },
-        sm: { span: 7, offset: 8 },
-      },
-      wrapperCol: {
-        xs: { span: 12 },
-        sm: { span: 9 },
-        md: { span: 8 }
-      },
-      style: {marginRight: '0'}
-    };
-
-    const submitFormLayout = {
-      wrapperCol: {
-        xs: { span: 24, offset: 0 },
-        sm: { span: 10, offset: 7 },
-      },
-    };
 
     return (
         <div>
@@ -104,18 +73,12 @@ class ProductTabs extends PureComponent {
                         <TabPane tab={formatMessage({id: product})} key={product}>
                             <Row>
                                 <Col {...halfPageTabCol}>
-                                    <Card style={{textTransform: 'uppercase'}} title={formatMessage({id: product})}
-                                      extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>}
-                                      cover={ <img alt={product} src={images[`${product}.png`]} /> }>
-                                    </Card>
-                                </Col>
-                                <Col {...halfPageTabCol} style={{marginLeft: '10px'}}>
-                                    <Card title={formatMessage({id: 'description'})}>
-                                      <p>
+                                  <Card bodyStyle={{maxHeight: '1000px'}} style={{textTransform: 'uppercase'}} title={<b>{formatMessage({id: product})}</b>}
+                                        // extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>}
+                                        cover={ <img alt={product} src={images[`${product}.png`]} /> }>
                                         {formatMessage({id: `${product}_description`})}
-                                      </p>
-                                    </Card>
-                                </Col>
+                                      </Card>
+                                  </Col>
                                 {/*<Col {...{ xs: { span: 24, offset: 0 }, sm: { span: 24, offset: 0 }, md: { span: 11, offset: 2 }, lg: { span: 11, offset: 2 }, xl: { span: 11, offset: 2 }, style: { marginBottom: 24}}}>
                                     <Card title={formatMessage({id: 'usage'})} extra={<a href="#">Ağırlık Hesapla<Icon type="tool" /></a>} cover={ <img alt={product} src={images[`${product}2.png`]} /> }>
                                         <Meta

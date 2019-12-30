@@ -1,16 +1,12 @@
 import React, { memo } from 'react';
-import { Row, Col, Icon, Tooltip, Card, Avatar } from 'antd';
+import { Row, Col, Card } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import router from 'umi/router';
 import styles from './Analysis.less';
-import { ChartCard, MiniArea, MiniBar, MiniProgress, Field } from '@/components/Charts';
-import Trend from '@/components/Trend';
-import numeral from 'numeral';
-import Yuan from '@/utils/Yuan';
-import uzunmamuller from '../../assets/uzunmamuller.jpg';
-import yassimamuller from '../../assets/yassimamuller.jpg';
-import profiller from '../../assets/profiller.png';
-import dekoratifmamuller from '../../assets/dekoratifmamuller.jpg';
+import uzunmamuller from '../../assets/UZUNMAMULLER1.png';
+import yassimamuller from '../../assets/YASSIMAMULLER.png';
+import profiller from '../../assets/PROFİLLER.png';
+import dekoratifmamuller from '../../assets/DEKORATIFMAMULLER.png';
 
 const topColResponsiveProps = {
   xs: 24,

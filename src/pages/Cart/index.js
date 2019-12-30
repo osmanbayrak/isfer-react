@@ -43,7 +43,7 @@ class Cart extends Component {
       })
     });
     body = `${body}                                                                                                                                                                                                                     ${this.state.extra}`
-    window.location.href = (`mailto:omerfarukpolat@gmail.com?subject=Demir Siparişi&body=${body}`);
+    window.location.href = (`mailto:info@isfer.net?subject=Demir Siparişi&body=${body}`);
   }
 
   render() {

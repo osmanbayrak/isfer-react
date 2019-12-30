@@ -97,9 +97,9 @@ class Contact extends Component {
                   </Card>
                 </Col>
                 <Col {...thirdPageTabCol}>
-                  <Card title="MERKEZ & FABRİKA">
+                  <Card title="ADRES">
                     <ul style={{paddingLeft: '5px', fontSize: '13px'}}>
-                        <li style={{textAlign: 'left', padding: '15px'}}><Icon style={{marginRight: '10px'}} type="home" />  Sultan Orhan Mah. 1174/1 Sok. No:6 41400 Gebze/KOCAELİ</li>
+                        <li style={{textAlign: 'left', padding: '15px'}}><Icon style={{marginRight: '10px'}} type="home" />  İSTANBUL METAL FERFORJE İNŞ. SAN. TİC. LTD. ŞTİ. Sanayi Mah. Hızır Reis Cad. No:16 Kurtköy/Pendik/İstanbul 0216 595 09 09 / +90  216 314 66 66 info@isfer.net</li>
                         <li style={{textAlign: 'left', padding: '15px'}}><Icon style={{marginRight: '10px'}} type="phone" />  0262 644 96 66</li>
                         <li style={{textAlign: 'left', padding: '15px'}}><Icon style={{marginRight: '10px'}} type="phone" />  0262 644 95 44</li>
                         <li style={{textAlign: 'left', padding: '15px'}}><Icon style={{marginRight: '10px'}} type="mail" />  info@isfer.net</li>
