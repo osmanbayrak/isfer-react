@@ -3,9 +3,9 @@ import { Row, Col, Card } from 'antd';
 import { FormattedMessage, formatMessage } from 'umi/locale';
 import styles from './Analysis.less';
 import production1 from '../../assets/ferforjeimalatı.png';
-import production2 from '../../assets/lazerKesim.JPG';
+import production2 from '../../assets/lazerKesim.jpg';
 import production3 from '../../assets/KESİMBUKUM.png';
-import production4 from '../../assets/STEELSTRUCTURE.JPG';
+import production4 from '../../assets/steelstructure.jpg';
 
 const topColResponsiveProps = {
   xs: 24,

@@ -4,10 +4,10 @@ import { Carousel } from 'antd';
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import HeaderBox from '@/components/HeaderBox';
 import PageLoading from '@/components/PageLoading';
-import anasayfa1 from '../../assets/ANASAYFA1.JPG';
-import anasayfa2 from '../../assets/ANASAYFA2.JPG';
-import anasayfa3 from '../../assets/ANASAYFA3.JPG';
-import anasayfa4 from '../../assets/ANASAYFA4.JPG';
+import anasayfa1 from '../../assets/ANASAYFA1.jpg';
+import anasayfa2 from '../../assets/ANASAYFA2.jpg';
+import anasayfa3 from '../../assets/ANASAYFA3.jpg';
+import anasayfa4 from '../../assets/ANASAYFA4.jpg';
 
 const ProductsRow = React.lazy(() => import('./ProductsRow'));
 const ActivitiesRow = React.lazy(() => import('./ActivitiesRow'));
